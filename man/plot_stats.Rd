@@ -10,18 +10,15 @@ plot_stats(data)
 \item{data}{simply diamonds free dataset}
 }
 \value{
-A plot
+A facet grid plot
 }
 \description{
 Plotting diamonds dataset
 }
 \details{
-This function takes some data and uses them to fit the model
-}
-\examples{
-# basic function
-fit_model <- function(data) {
-lm(price ~ carat, data) \%>\%
-coefficients()
-}
+This function takes the diamonds dataset and uses it to display jittered boxplots and show distribution of
+diamonds for each diamond cut category like: fair, good, very good, premium, ideal.
+The jittered data points show the relationship between the carats and the price for each cut category
+colored by diamond clarity. I chose to display this grid of plots because I think it is very informative
+regarding this dataset. It also takes only dataframes as parameters.
 }

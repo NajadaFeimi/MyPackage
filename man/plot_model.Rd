@@ -4,7 +4,10 @@
 \alias{plot_model}
 \title{Plotting diamonds dataset}
 \usage{
-plot_model(model, data)
+plot_model(model)
+}
+\arguments{
+\item{model}{The model I previously fitted in the other function}
 }
 \value{
 A plot
@@ -13,13 +16,10 @@ A plot
 Plotting diamonds dataset
 }
 \details{
-This function takes as parameter the data and the linear model we fitted the data at the other function
+This function takes as parameter the data and the linear model we fitted using the function fit_model()
+of this dataset and it displayes the relationship between carats and the price of the diamonds using as an
+intercept the coefficients from the fitted model.
 }
 \examples{
-plot_model <- function(model, data) {
- ggplot(data) +
-  geom_point(aes(x = carat, y = price)) +
-   geom_abline(intercept = model[1], slope = model[2])+
-   ggtitle("The relationship of the price and the carats of the diamond")
-}
+plot_model(fit_model())
 }
