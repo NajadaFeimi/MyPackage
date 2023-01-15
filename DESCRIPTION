@@ -1,10 +1,14 @@
 Package: MyPackage
 Type: Package
-Title: Shiny App
+Title: Exploring the possibilities while developing a package for the first time
 Version: 0.1.0
 Author: Najada Feimi
 Maintainer: Najada Feimi <najada.feimi.001@student.uni.lu>
-Description: This package does automatically some ShinyApp application.
+Description: This package has 3 functions: fit_model, plot_model and plot stats. The fit model fits a lm model to the diamonds
+   dataset, then its coefficients are used to plot the scatterplot in plot_model which shows the relation between carat and 
+   target variable price. I also wanted to build a fancier plot showing different statistical relations between the features
+   of the dataset. For this purpose I created another function displaying jittery boxplots for each diamond cut colored by
+   the clarity fo the diamonds. This is an informative plot showing relations for most of the features of the dataset.
 License: GPL (>=3)
 Encoding: UTF-8
 LazyData: true
@@ -14,7 +18,6 @@ Depends:
     R (>= 4.1),
 Imports:
     dplyr,
-    janitor,
     ggplot2
 Suggests: 
     knitr,
